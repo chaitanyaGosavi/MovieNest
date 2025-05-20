@@ -24,7 +24,7 @@ const RecentMovieList = ({
     async function loadMovieDetails(id) {
       setIsDetailsLoading(true);
       const resMovieDetails = await fetch(
-        `http://www.omdbapi.com/?apikey=${KEY}&i=${id}`
+        `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
       );
       const resMovieDetailsData = await resMovieDetails.json();
       setSelectedMovie(resMovieDetailsData);
